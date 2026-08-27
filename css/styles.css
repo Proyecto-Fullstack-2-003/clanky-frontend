@@ -1,0 +1,67 @@
+:root {
+    --clanky-red: #e13e37;
+    --clanky-yellow: #fce41e;
+}
+
+/* --- NAVBAR --- */
+.nav-clanky {
+    background-color: var(--clanky-red);
+}
+
+.nav-clanky .brand-text {
+    color: var(--clanky-yellow);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-clanky .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-clanky .nav-link:hover {
+    color: var(--clanky-yellow) !important;
+}
+
+/* Botón buscador */
+.btn-outline-custom {
+    color: var(--clanky-yellow);
+    border-color: var(--clanky-yellow);
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--clanky-yellow);
+    color: var(--clanky-red);
+}
+
+/* Iconos nav */
+.icon-links a {
+    color: var(--clanky-yellow);
+    transition: transform 0.2s, color 0.2s;
+}
+
+.icon-links a:hover {
+    color: white;
+    transform: scale(1.1); /* Pequeño efecto de agrandado */
+}
+
+/* --- BOTÓN PRINCIPAL --- */
+.btn-clanky {
+    background-color: var(--clanky-red);
+    color: var(--clanky-yellow);
+    border: 2px solid var(--clanky-red);
+    font-weight: bold;
+}
+
+.btn-clanky:hover {
+    background-color: white;
+    color: var(--clanky-red);
+    border-color: var(--clanky-red);
+}
+
+/* --- FOOTER --- */
+.footer-clanky {
+    background-color: #292929;
+    color: white;
+}

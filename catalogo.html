@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Completo - Clanky Disquería</title>
+    <!-- Bootstrap CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <nav class="navbar navbar-expand-lg nav-clanky">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="https://i.pinimg.com/736x/67/62/03/676203cc2d70b1ea218810abf0da6600.jpg" alt="Clanky Logo"
+                        width="40" height="40" class="d-inline-block align-text-top me-2">
+                    <span class="brand-text">Clanky</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="coleccion/vinilos.html">Vinilos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="coleccion/cds.html">CDs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="coleccion/merch.html">Merch</a></li>
+                    </ul>
+
+                    <form class="d-flex me-4" role="search">
+                        <input class="form-control me-2 border-0" type="search" placeholder="Buscar discos...">
+                        <button class="btn btn-outline-custom" type="submit">Buscar</button>
+                    </form>
+
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 icon-links">
+                        <a href="carrito.html" title="Ver Carrito"><i class="bi bi-cart3 fs-4"></i></a>
+                        <a href="login.html" title="Ingresar"><i class="bi bi-person-circle fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Catálogo de Productos -->
+    <main class="container my-5">
+        <h2 class="text-center mb-4 fw-bold" style="color: var(--clanky-red);">Catálogo Destacado</h2>
+
+        <!-- Grilla de Bootstrap (1 CELU, 2 TABLET, 3 PC)-->
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <!-- Producto 1 -->
+            <div class="col">
+                <div class="card" style="width: 16rem;" >
+                    <img src="https://dojiw2m9tvv09.cloudfront.net/41657/product/X_25344252822.jpg?114&t=1787841571" width="255" height="255" card-img-top p-2" alt="nombre" >
+                    <div class="card-body d-flex flex-column                                ">
+                        <span class="badge bg-warning text-dark mb-2 w-auto align-self-start">Vinilo</span>
+                        <h5 class="card-title fw-bold">VINILO LED ZEPPELIN LED ZEPPELIN I</h5>
+                        <p class="card-text text-muted mb-1"></p>
+                        <p class="card-text small text-secondary"></p>
+                        <div class="mt-auto">
+                            <h4 class="fw-bold mb-3">$34.990</h4>
+                            <button class="btn btn-clanky w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al
+                                Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col">
+                <div class="card" style="width: 16rem;">
+                    <img src="https://dojiw2m9tvv09.cloudfront.net/41657/product/X_765254-28086564731.jpg?114&t=1787841571" class="card-img-top p-2" alt="nombre">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-warning text-dark mb-2 w-auto align-self-start">Vinilo</span>
+                        <h5 class="card-title fw-bold">asd</h5>
+                        <p class="card-text text-muted mb-1">asd</p>
+                        <p class="card-text small text-secondary"></p>
+                        <div class="mt-auto">
+                            <h4 class="fw-bold mb-3">$34.990</h4>
+                            <button class="btn btn-clanky w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al
+                                Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col">
+                <div class="card" style="width: 16rem;">
+                    <img src="https://dojiw2m9tvv09.cloudfront.net/41657/product/X_5908586799.jpg?114&t=1787841571" class="card-img-top p-2" alt="nombre">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-warning text-dark mb-2 w-auto align-self-start">Vinilo</span>
+                        <h5 class="card-title fw-bold">asd</h5>
+                        <p class="card-text text-muted mb-1">asd</p>
+                        <p class="card-text small text-secondary"></p>
+                        <div class="mt-auto">
+                            <h4 class="fw-bold mb-3">$34.990</h4>
+                            <button class="btn btn-clanky w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al
+                                Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col">
+                <div class="card" style="width: 16rem;">
+                    <img src="https://dojiw2m9tvv09.cloudfront.net/41657/product/X_28025996652.jpg?114&t=1787841571" class="card-img-top p-2" alt="nombre">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-warning text-dark mb-2 w-auto align-self-start">Vinilo</span>
+                        <h5 class="card-title fw-bold">asd</h5>
+                        <p class="card-text text-muted mb-1">asd</p>
+                        <p class="card-text small text-secondary"></p>
+                        <div class="mt-auto">
+                            <h4 class="fw-bold mb-3">$34.990</h4>
+                            <button class="btn btn-clanky w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al
+                                Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="col">
+                <div class="card" style="width: 16rem;">
+                    <img src="https://dojiw2m9tvv09.cloudfront.net/41657/product/X_37352204395.jpg?114&t=1787843382" class="card-img-top p-2" alt="nombre">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-warning text-dark mb-2 w-auto align-self-start">Vinilo</span>
+                        <h5 class="card-title fw-bold">asd</h5>
+                        <p class="card-text text-muted mb-1">asd</p>
+                        <p class="card-text small text-secondary"></p>
+                        <div class="mt-auto">
+                            <h4 class="fw-bold mb-3">$34.990</h4>
+                            <button class="btn btn-clanky w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al
+                                Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="col">
+                <div class="card" style="width: 16rem;">
+                    <img src="https://dojiw2m9tvv09.cloudfront.net/41657/product/X_3429978-25738132526.jpg?114&t=1787843414" class="card-img-top p-2" alt="nombre">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-warning text-dark mb-2 w-auto align-self-start">Vinilo</span>
+                        <h5 class="card-title fw-bold">asd</h5>
+                        <p class="card-text text-muted mb-1">asd</p>
+                        <p class="card-text small text-secondary"></p>
+                        <div class="mt-auto">
+                            <h4 class="fw-bold mb-3">$34.990</h4>
+                            <button class="btn btn-clanky w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al
+                                Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-clanky text-center p-3 mt-5">
+        <p class="mb-0">&copy; 2026 Disquería Clanky. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

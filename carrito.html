@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Clanky Disquería</title>
+    <!-- Bootstrap CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <nav class="navbar navbar-expand-lg nav-clanky">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="https://i.pinimg.com/736x/67/62/03/676203cc2d70b1ea218810abf0da6600.jpg" alt="Clanky Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+                    <span class="brand-text">Clanky</span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="coleccion/cds.html">CDs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="coleccion/merch.html">Merch</a></li>
+                    </ul>
+
+                    <form class="d-flex me-4" role="search">
+                        <input class="form-control me-2 border-0" type="search" placeholder="Buscar discos...">
+                        <button class="btn btn-outline-custom" type="submit">Buscar</button>
+                    </form>
+
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 icon-links">
+                        <a href="carrito.html" class="position-relative" title="Ver Carrito">
+                            <i class="bi bi-cart3 fs-4"></i>
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                        <a href="login.html" title="Ingresar"><i class="bi bi-person-circle fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Vista de Carrito -->
+    <main class="container my-5">
+        <h2 class="text-center mb-4 fw-bold style-red" style="color: var(--clanky-red, #dc3545);">Mi Carrito de Compras</h2>
+
+        <div class="row g-4">
+            <!-- Tabla de productos -->
+            <div class="col-lg-8">
+                <div class="table-responsive bg-white rounded shadow-sm p-3">
+                    <table class="table align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th class="text-center">Cantidad</th>
+                                <th>Subtotal</th>
+                                <th class="text-center">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="items-carrito">
+                            <!-- Inyectado mediante carrito.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Resumen de Compra -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm p-3">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold mb-4">Resumen de Compra</h4>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="fs-5 fw-bold">TOTAL:</span>
+                            <span id="total-carrito" class="fs-4 fw-bold text-danger">$0</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cupon" class="form-label small text-muted">¿Tienes un cupón?</label>
+                            <div class="input-group">
+                                <input type="text" id="cupon" class="form-control" placeholder="Código de descuento">
+                                <button class="btn btn-outline-secondary" type="button">Aplicar</button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success w-100 py-2 fw-bold mb-2">
+                            <i class="bi bi-credit-card me-1"></i> PAGAR
+                        </button>
+
+                        <button class="btn btn-outline-danger w-100 py-2" onclick="vaciarCarrito()">
+                            <i class="bi bi-trash me-1"></i> Vaciar Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-clanky text-center p-3 mt-5">
+        <p class="mb-0">&copy; 2026 Disquería Clanky. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>

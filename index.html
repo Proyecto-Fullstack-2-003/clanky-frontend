@@ -19,58 +19,138 @@
     <header>
         <nav class="navbar navbar-expand-lg nav-clanky">
             <div class="container">
-                
+
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="https://i.pinimg.com/736x/67/62/03/676203cc2d70b1ea218810abf0da6600.jpg" alt="Clanky Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+                    <img src="https://i.pinimg.com/736x/67/62/03/676203cc2d70b1ea218810abf0da6600.jpg" alt="Clanky Logo"
+                        width="40" height="40" class="d-inline-block align-text-top me-2">
                     <span class="brand-text">Clanky</span>
                 </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Activar navegación">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Activar navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Rutas apuntando exacto a la carpeta coleccion/ -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
                         <li class="nav-item"><a class="nav-link" href="coleccion/cds.html">CDs</a></li>
                         <li class="nav-item"><a class="nav-link" href="coleccion/merch.html">Merch</a></li>
                     </ul>
-                    
+
                     <!-- Buscador -->
                     <form class="d-flex me-4" role="search">
-                        <input class="form-control me-2 border-0" type="search" placeholder="Buscar discos..." aria-label="Buscar">
+                        <input class="form-control me-2 border-0" type="search" placeholder="Buscar discos..."
+                            aria-label="Buscar">
                         <button class="btn btn-outline-custom" type="submit">Buscar</button>
                     </form>
-            
+
                     <!-- Iconos (Carrito con Badge y Login) -->
                     <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 icon-links">
                         <a href="carrito.html" title="Ver Carrito" class="position-relative">
                             <i class="bi bi-cart3 fs-4"></i>
-                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                            <span id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
                         </a>
                         <a href="login.html" title="Ingresar"><i class="bi bi-person-circle fs-4"></i></a>
                     </div>
                 </div>
-                
+
             </div>
         </nav>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="container my-5">
-        <section class="text-center py-5">
-            <h2>Bienvenido a la mejor tienda de vinilos y CDs</h2>
-            <p class="lead">Explora nuestro catálogo y encuentra esa edición especial que tanto buscas.</p>
-            <a href="catalogo.html" class="btn btn-clanky btn-lg mt-3">Ver Catálogo</a>
+    <!-- Contenido Principal Estilo Revista / Billboard -->
+    <main class="container my-4">
+
+        <!-- 1. SECCIÓN HERO -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <!-- Usamos una tarjeta con la imagen de fondo oscurecida para que resalte el texto -->
+                <div class="card bg-dark text-white border-0 shadow-lg position-relative overflow-hidden"
+                    style="min-height: 450px;">
+                    <!-- Imagen de fondo (puedes cambiarla) -->
+                    <img src="https://i0.wp.com/elplanetaurbano.com/wp-content/uploads/2018/10/NocheDisquer%C3%ADas3.jpg?fit=770%2C471&ssl=1"
+                        class="card-img position-absolute w-100 h-100" style="object-fit: cover; opacity: 0.4;"
+                        alt="Lanzamiento Principal">
+
+                    <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
+                        <span class="badge bg-danger mb-3 py-2 px-3 text-uppercase fw-bold"
+                            style="width: fit-content;">Exclusivo Clanky</span>
+                        <h1 class="card-title fw-bold display-4 mb-2">asd</h1>
+                        <p class="card-text lead w-75 d-none d-md-block">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Ipsa ex aliquam corporis qui perspiciatis dicta praesentium harum voluptas
+                            nostrum dolore.</p>
+                        <a href="coleccion/vinilos.html" class="btn btn-warning fw-bold mt-3 text-dark"
+                            style="width: fit-content;">Reservar Vinilo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Botón Catálogo -->
+        <div class="row mt-4 mb-5">
+            <div class="col-12 text-center">
+                <a href="catalogo.html" class="btn btn-clanky fw-bold px-5 py-2 fs-5 shadow-sm">
+                    Ver Catálogo
+                </a>
+            </div>
+        </div>
+        <!-- 2. SECCIÓN CATEGORÍAS -->
+        <section class="row justify-content-center g-4 mb-5">
+
+            <!-- Categoría 1: Vinilos -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <a href="coleccion/vinilos.html" class="text-decoration-none">
+                    <div class="card text-white border-0 overflow-hidden shadow-sm h-100 position-relative">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?q=80&w=600&auto=format&fit=crop"
+                            class="card-img rounded-3" style="height: 220px; object-fit: cover;" alt="Vinilos">
+                        <div
+                            class="card-img-overlay d-flex justify-content-center align-items-center bg-dark bg-opacity-25">
+                            <h5 class="fw-bold mb-0 px-4 py-2 text-white text-uppercase"
+                                style="background-color: rgba(33, 37, 41, 0.85);">VINILOS</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Categoría 2: CDs -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <a href="coleccion/cds.html" class="text-decoration-none">
+                    <div class="card text-white border-0 overflow-hidden shadow-sm h-100 position-relative">
+                        <img src="https://dojiw2m9tvv09.cloudfront.net/41657/2/cd16232549.jpeg?114&t=1787884050"
+                            class="card-img rounded-3" style="height: 220px; object-fit: cover;" alt="CDs">
+                        <div
+                            class="card-img-overlay d-flex justify-content-center align-items-center bg-dark bg-opacity-25">
+                            <h5 class="fw-bold mb-0 px-4 py-2 text-white text-uppercase"
+                                style="background-color: rgba(33, 37, 41, 0.85);">CD'S</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Categoría 3: Merch -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <a href="coleccion/merch.html" class="text-decoration-none">
+                    <div class="card text-white border-0 overflow-hidden shadow-sm h-100 position-relative">
+                        <img src="https://images.squarespace-cdn.com/content/v1/613add39ff51db1c827d41c2/2161650c-f0f9-4905-a4db-91204bcae5e6/CONTAIN+WEBSITE+BANNERS_ARTIST_MERCH-2.jpg"
+                            class="card-img rounded-3" style="height: 220px; object-fit: cover;" alt="Merch">
+                        <div
+                            class="card-img-overlay d-flex justify-content-center align-items-center bg-dark bg-opacity-25">
+                            <h5 class="fw-bold mb-0 px-4 py-2 text-white text-uppercase"
+                                style="background-color: rgba(33, 37, 41, 0.85);">MERCH</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
         </section>
 
-        <!-- Contenedor dinámico donde main.js cargará las cards de productos destacados -->
-        <section class="row g-4 mt-2" id="contenedor-productos">
-            <!-- JS (main.js) inyectará aquí los productos al cargar -->
-        </section>
     </main>
 
     <!-- FOOTER -->

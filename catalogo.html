@@ -31,13 +31,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
                         <li class="nav-item"><a class="nav-link" href="coleccion/vinilos.html">Vinilos</a></li>
                         <li class="nav-item"><a class="nav-link" href="coleccion/cds.html">CDs</a></li>
                         <li class="nav-item"><a class="nav-link" href="coleccion/merch.html">Merch</a></li>
                     </ul>
 
-                    <form class="d-flex me-4" role="search">
-                        <input class="form-control me-2 border-0" type="search" placeholder="Buscar discos...">
+                    <form class="d-flex me-4" role="search"
+                        onsubmit="event.preventDefault(); renderProductos(productosDisqueria);">
+                        <input id="input-busqueda" class="form-control me-2 border-0" type="search"
+                            placeholder="Buscar discos..." onkeyup="renderProductos(productosDisqueria)">
                         <button class="btn btn-outline-custom" type="submit">Buscar</button>
                     </form>
 
@@ -50,22 +53,35 @@
         </nav>
     </header>
 
-<!-- Catálogo de Productos -->
-<main class="container my-5">
-    <h2 class="text-center mb-4 fw-bold" style="color: var(--clanky-red);">Catálogo Destacado</h2>
+    <!-- Catálogo de Productos -->
+    <main class="container my-5">
+        <h2 class="text-center text-white fw-bold"
+            style="text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+            Catálogo Destacado
+        </h2>
+        <div class="d-flex justify-content-end mb-4">
+            <select id="orden-productos" class="form-select w-auto border-secondary shadow-sm"
+                onchange="renderProductos(productosDisqueria)">
+                <option value="default">Ordenar por</option>
+                <option value="az">Nombres de A a Z</option>
+                <option value="za">Nombres de Z a A</option>
+                <option value="menor">Precios de menor a mayor</option>
+                <option value="mayor">Precios de mayor a menor</option>
+            </select>
+        </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="contenedor-productos">
-        <!-- Las tarjetas se inyectarán aquí -->
-    </div>
-</main>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="contenedor-productos" data-categoria="Todos">
+        </div>
+    </main>
 
-<!-- FOOTER -->
-<footer class="footer-clanky text-center p-3 mt-5">
-    <p class="mb-0">&copy; 2026 Disquería Clanky. Todos los derechos reservados.</p>
-</footer>
+    <!-- FOOTER -->
+    <footer class="footer-clanky text-center p-3 mt-5">
+        <p class="mb-0">&copy; 2026 Disquería Clanky. Todos los derechos reservados.</p>
+    </footer>
 
-<!-- Scripts (Bootstrap primero, luego el tuyo) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/catalogo.js"></script> <!-- Aquí enlazas tu nuevo archivo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

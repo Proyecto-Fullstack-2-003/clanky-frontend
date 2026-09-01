@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- CSS Propio -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -34,11 +34,11 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Rutas apuntando exacto a la carpeta coleccion/ -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="coleccion/vinilos.html">Vinilos</a></li>
                         <li class="nav-item"><a class="nav-link" href="coleccion/cds.html">CDs</a></li>
                         <li class="nav-item"><a class="nav-link" href="coleccion/merch.html">Merch</a></li>
                     </ul>
@@ -50,7 +50,7 @@
                         <button class="btn btn-outline-custom" type="submit">Buscar</button>
                     </form>
 
-                    <!-- Iconos (Carrito con Badge y Login) -->
+                    <!-- Iconos -->
                     <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 icon-links">
                         <a href="carrito.html" title="Ver Carrito" class="position-relative">
                             <i class="bi bi-cart3 fs-4"></i>
@@ -65,37 +65,92 @@
         </nav>
     </header>
 
-    <!-- Contenido Principal Estilo Revista / Billboard -->
+    <!-- Contenido Principal -->
     <main class="container my-4">
 
-        <!-- 1. SECCIÓN HERO -->
+        <!-- 1. SECCIÓN CARRUSEL -->
         <section class="row mb-5">
             <div class="col-12">
-                <!-- Usamos una tarjeta con la imagen de fondo oscurecida para que resalte el texto -->
-                <div class="card bg-dark text-white border-0 shadow-lg position-relative overflow-hidden"
-                    style="min-height: 450px;">
-                    <!-- Imagen de fondo (puedes cambiarla) -->
-                    <img src="https://i0.wp.com/elplanetaurbano.com/wp-content/uploads/2018/10/NocheDisquer%C3%ADas3.jpg?fit=770%2C471&ssl=1"
-                        class="card-img position-absolute w-100 h-100" style="object-fit: cover; opacity: 0.4;"
-                        alt="Lanzamiento Principal">
-
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
-                        <span class="badge bg-danger mb-3 py-2 px-3 text-uppercase fw-bold"
-                            style="width: fit-content;">Exclusivo Clanky</span>
-                        <h1 class="card-title fw-bold display-4 mb-2">asd</h1>
-                        <p class="card-text lead w-75 d-none d-md-block">Lorem, ipsum dolor sit amet consectetur
-                            adipisicing elit. Ipsa ex aliquam corporis qui perspiciatis dicta praesentium harum voluptas
-                            nostrum dolore.</p>
-                        <a href="coleccion/vinilos.html" class="btn btn-warning fw-bold mt-3 text-dark"
-                            style="width: fit-content;">Reservar Vinilo</a>
+                <div id="carruselHero" class="carousel slide shadow-lg rounded overflow-hidden" data-bs-ride="carousel">
+                    <div class="carousel-indicators mb-0 pb-3">
+                        <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
+                    <!-- 1 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card bg-dark text-white border-0 position-relative" style="min-height: 450px;">
+                                <img src="https://i0.wp.com/elplanetaurbano.com/wp-content/uploads/2018/10/NocheDisquer%C3%ADas3.jpg?fit=770%2C471&ssl=1"
+                                    class="card-img position-absolute w-100 h-100"
+                                    style="object-fit: cover; opacity: 0.4;" alt="Vinilos">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
+                                    <h1 class="card-title fw-bold display-4 mb-2">Clásicos en Vinilo</h1>
+                                    <p class="card-text lead w-75 d-none d-md-block">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Architecto obcaecati, aliquid officiis eveniet
+                                        magni explicabo totam in! Cupiditate, est modi.</p>
+                                    <a href="coleccion/vinilos.html" class="btn btn-warning fw-bold mt-3 text-dark"
+                                        style="width: fit-content;">asd</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="carousel-item">
+                            <div class="card bg-dark text-white border-0 position-relative" style="min-height: 450px;">
+                                <img src="https://indierocks.sfo3.digitaloceanspaces.com/wp-content/uploads/2022/08/Fhauna-records.jpg"
+                                    class="card-img position-absolute w-100 h-100"
+                                    style="object-fit: cover; opacity: 0.4;" alt="CDs">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
+                                    <h1 class="card-title fw-bold display-4 mb-2">Últimos Lanzamientos</h1>
+                                    <p class="card-text lead w-75 d-none d-md-block">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Accusamus pariatur excepturi nostrum fuga harum
+                                        nihil.</p>
+                                    <a href="coleccion/cds.html" class="btn btn-light fw-bold mt-3 text-dark"
+                                        style="width: fit-content;">asd</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="carousel-item">
+                            <div class="card bg-dark text-white border-0 position-relative" style="min-height: 450px;">
+                                <img src="https://madrid365.es/wp-content/uploads/2023/05/1-2023-05-30T212833.784.png"
+                                    class="card-img position-absolute w-100 h-100"
+                                    style="object-fit: cover; opacity: 0.4;" alt="Merch">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
+                                    <h1 class="card-title fw-bold display-4 mb-2">asd</h1>
+                                    <p class="card-text lead w-75 d-none d-md-block">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Delectus quasi natus, libero omnis ipsum possimus.
+                                    </p>
+                                    <a href="coleccion/merch.html" class="btn btn-success fw-bold mt-3"
+                                        style="width: fit-content;">asd</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- FLECHITAS -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselHero"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselHero"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+
                 </div>
             </div>
         </section>
         <!-- Botón Catálogo -->
         <div class="row mt-4 mb-5">
             <div class="col-12 text-center">
-                <a href="catalogo.html" class="btn btn-clanky fw-bold px-5 py-2 fs-5 shadow-sm">
+                <a href="catalogo.html" class="btn fw-bold px-5 py-2 fs-5 text-uppercase"
+                    style="background-color: #d12020; color: #ffdd00; border: 2px solid #111; box-shadow: 4px 4px 0px #111; transition: 0.2s;">
                     Ver Catálogo
                 </a>
             </div>

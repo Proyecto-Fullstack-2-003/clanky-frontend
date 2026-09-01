@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERCH - Clanky Disquería</title>
+    <!-- Bootstrap CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav class="navbar navbar-expand-lg nav-clanky">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="https://i.pinimg.com/736x/67/62/03/676203cc2d70b1ea218810abf0da6600.jpg" alt="Clanky Logo"
+                        width="40" height="40" class="d-inline-block align-text-top me-2">
+                    <span class="brand-text">Clanky</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../catalogo.html">Catalogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="vinilos.html">Vinilos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cds.html">CDs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+                    </ul>
+
+                    <form class="d-flex me-4" role="search"
+                        onsubmit="event.preventDefault(); renderProductos(productosDisqueria);">
+                        <input id="input-busqueda" class="form-control me-2 border-0" type="search"
+                            placeholder="Buscar discos..." onkeyup="renderProductos(productosDisqueria)">
+                        <button class="btn btn-outline-custom" type="submit">Buscar</button>
+                    </form>
+
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 icon-links">
+                        <a href="../carrito.html" title="Ver Carrito"><i class="bi bi-cart3 fs-4"></i></a>
+                        <a href="../login.html" title="Ingresar"><i class="bi bi-person-circle fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Catálogo de Productos -->
+    <main class="container my-5">
+        <h2 class="text-center text-white fw-bold"
+            style="text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+            Merchandise Oficial
+        </h2>
+        <div class="d-flex justify-content-end mb-4">
+            <select id="orden-productos" class="form-select w-auto border-secondary shadow-sm"
+                onchange="renderProductos(productosDisqueria)">
+                <option value="default">Ordenar por</option>
+                <option value="az">Nombres de A a Z</option>
+                <option value="za">Nombres de Z a A</option>
+                <option value="menor">Precios de menor a mayor</option>
+                <option value="mayor">Precios de mayor a menor</option>
+            </select>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="contenedor-productos" data-categoria="Merch">
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-clanky text-center p-3 mt-5">
+        <p class="mb-0">&copy; 2026 Disquería Clanky. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/catalogo.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</body>
+
+</html>

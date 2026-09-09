@@ -1,0 +1,80 @@
+<<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clanky Disquería</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+</head>
+<body class="d-flex align-items-center justify-content-center py-5">
+
+  <div class="container" style="max-width: 420px;">
+    <div class="card vinyl-card p-4 bg-dark text-white">
+      
+      <!-- Encabezado con estética de vinilo -->
+      <div class="text-center mb-4">
+        <i class="bi bi-disc-fill vinyl-icon d-inline-block"></i>
+        <h2 class="fw-bold mt-2 mb-0">Clanky Disquería</h2>
+        <p class="text-secondary small">Inicia sesión para explorar la colección</p>
+      </div>
+
+      <!-- Formulario -->
+      <form id="loginForm" class="needs-validation" novalidate>
+        
+        <!-- Correo Electrónico -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <div class="input-group">
+            <span class="input-group-text bg-secondary border-secondary text-white"><i class="bi bi-envelope"></i></span>
+            <input type="email" class="form-control" id="email" placeholder="coleccionista@vinilos.com" required>
+            <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+          </div>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <div class="input-group">
+            <span class="input-group-text bg-secondary border-secondary text-white"><i class="bi bi-lock"></i></span>
+            <input type="password" class="form-control" id="password" required>
+            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+              <i class="bi bi-eye"></i>
+            </button>
+            <div class="invalid-feedback" id="pwdFeedback">
+              La contraseña debe cumplir con los requisitos mínimos.
+            </div>
+          </div>
+        </div>
+
+        <!-- Requisitos de Contraseña -->
+        <div class="mb-3 p-3 bg-body-tertiary rounded small">
+          <p class="mb-1 fw-semibold">La contraseña debe tener:</p>
+          <ul class="list-unstyled mb-0 id-rules">
+            <li id="ruleLength" class="text-danger"><i class="bi bi-x-circle me-1"></i>Al menos 8 caracteres</li>
+            <li id="ruleNumber" class="text-danger"><i class="bi bi-x-circle me-1"></i>Al menos un número</li>
+            <li id="ruleSpecial" class="text-danger"><i class="bi bi-x-circle me-1"></i>Un carácter especial (@$!%*?&)</li>
+          </ul>
+        </div>
+
+        <!-- Opción Recordarme -->
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="rememberMe">
+        <label class="form-check-label small" for="rememberMe">Recordar mi sesión</label>
+    </div>
+
+        <!-- Botón Entrar -->
+        <button type="submit" class="btn btn-danger w-100 fw-bold py-2">ENTRAR A LA TIENDA</button>
+    </form>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,10 +1,10 @@
-// Ejecutar actualización del contador y del botón de admin al cargar la página
+// Al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
     actualizarContadorCarrito();
     mostrarBotonAdminSiCorresponde();
 });
 
-// Muestra el botón "Administración" en el navbar solo si hay sesión de admin activa
+// Muestra el botón "Administración" si hay sesión de admin
 function mostrarBotonAdminSiCorresponde() {
     const botonAdmin = document.getElementById("admin-panel-link");
     if (!botonAdmin) return;
@@ -21,9 +21,18 @@ function agregarAlCarrito(idProducto) {
 
     if (!productoEncontrado) return;
 
+    if (productoEncontrado.stock <= 0) {
+        alert("Este producto no tiene stock disponible.");
+        return;
+    }
+
     const existe = carritoActual.find(item => item.id == idProducto);
 
     if (existe) {
+        if (existe.cantidad >= productoEncontrado.stock) {
+            alert(`No puedes agregar más unidades. Stock disponible: ${productoEncontrado.stock}`);
+            return;
+        }
         existe.cantidad += 1;
     } else {
         carritoActual.push({

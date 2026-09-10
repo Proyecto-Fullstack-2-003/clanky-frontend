@@ -15,72 +15,49 @@
 <body>
     <!-- Encabezado -->
     <header>
-        <nav class="navbar navbar-expand-lg nav-clanky">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                    <img src="https://i.pinimg.com/736x/67/62/03/676203cc2d70b1ea218810abf0da6600.jpg" alt="Clanky Logo"
-                        width="40" height="40" class="d-inline-block align-text-top me-2">
-                    <span class="brand-text">Clanky</span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../catalogo.html">Catalogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="vinilos.html">Vinilos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cds.html">CDs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
-                    </ul>
-
-                    <form class="d-flex me-4" role="search"
-                        onsubmit="event.preventDefault(); renderProductos(productosDisqueria);">
-                        <input id="input-busqueda" class="form-control me-2 border-0" type="search"
-                            placeholder="Buscar discos..." onkeyup="renderProductos(productosDisqueria)">
-                        <button class="btn btn-outline-custom" type="submit">Buscar</button>
-                    </form>
-
-                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 icon-links">
-                        <a href="../carrito.html" title="Ver Carrito"><i class="bi bi-cart3 fs-4"></i></a>
-                        <a href="../login.html" title="Ingresar"><i class="bi bi-person-circle fs-4"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <div id="navbar"></div>
     </header>
 
     <!-- Catálogo de Productos -->
+<!-- Catálogo de Productos -->
     <main class="container my-5">
         <h2 class="text-center text-white fw-bold"
             style="text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
             Vinilos
         </h2>
-        <div class="d-flex justify-content-end mb-4">
-            <select id="orden-productos" class="form-select w-auto border-secondary shadow-sm"
-                onchange="renderProductos(productosDisqueria)">
-                <option value="default">Ordenar por</option>
-                <option value="az">Nombres de A a Z</option>
-                <option value="za">Nombres de Z a A</option>
-                <option value="menor">Precios de menor a mayor</option>
-                <option value="mayor">Precios de mayor a menor</option>
-            </select>
+        
+        <!-- Controles de Filtro y Orden -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mb-4">
+            <!-- Buscador -->
+            <div class="w-100 flex-grow-1">
+                <input type="search" id="input-busqueda" class="form-control form-control-lg border-dark border-2"
+                    placeholder="Buscar artista, disco o formato...">
+            </div>
+
+            <!--  Selector de orden -->
+            <div class="w-100" style="max-width: 250px;">
+                <select id="orden-productos" class="form-select form-select-lg border-dark border-2">
+                    <option value="todos">Ordenar por...</option>
+                    <option value="az">Nombre (A - Z)</option>
+                    <option value="za">Nombre (Z - A)</option>
+                    <option value="menor">Menor precio</option>
+                    <option value="mayor">Mayor precio</option>
+                </select>
+            </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="contenedor-productos" data-categoria="Vinilo">
-        </div>
+
+        <div id="contenedor-productos" class="row" data-categoria="Vinilo"></div>
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer-clanky text-center p-3 mt-5">
-        <p class="mb-0">&copy; 2026 Disquería Clanky. Todos los derechos reservados.</p>
-    </footer>
+    <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/catalogo.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/componentes.js"></script>
+    
 </body>
 </body>
 

@@ -12,7 +12,7 @@
 
 <body>
 
-    <!-- Encabezado y Navegación -->
+    <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg nav-clanky">
             <div class="container">
@@ -41,26 +41,113 @@
         </nav>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="container my-5">
-        <div class="card border-0 shadow-lg">
-            <div class="card-body p-4 p-md-5">
+    <!-- Main -->
+    <main class="container py-5">
 
-                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-                    <h2 class="fw-bold mb-0"><i class="bi bi-gear-fill me-2"></i>Panel de Administración</h2>
-                    <button id="btn-cerrar-sesion-admin" class="btn btn-outline-danger btn-sm">
-                        <i class="bi bi-box-arrow-right me-1"></i> Cerrar sesión
-                    </button>
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+                <h1 class="fw-bold h3 mb-0">Panel de Administración</h1>
+                <p class="text-muted mb-0">Gestión de productos de Clanky — <span id="admin-nombre"></span></p>
+            </div>
+            <button id="btn-cerrar-sesion-admin" class="btn btn-outline-danger btn-sm">
+                <i class="bi bi-box-arrow-right me-1"></i> Cerrar sesión
+            </button>
+        </div>
+
+        <!-- Resumen -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h6 class="text-muted">Productos</h6>
+                        <h2 id="totalProductos">0</h2>
+                    </div>
                 </div>
-
-                <p class="mb-1">Bienvenido, <strong id="admin-nombre"></strong> 👋</p>
-                <p class="text-muted mb-0">
-                    Este es el punto de partida del panel. Aquí puedes ir agregando la gestión de
-                    productos, pedidos y usuarios de Clanky.
-                </p>
-
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h6 class="text-muted">Unidades en stock</h6>
+                        <h2 id="totalStock">0</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h6 class="text-muted">Formatos</h6>
+                        <h2 id="totalCategorias">0</h2>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Gestión de productos -->
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                <h2 class="h5 mb-0">Productos</h2>
+                <button class="btn btn-success btn-sm" id="btnNuevoProducto">+ Nuevo producto</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Formato</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaProductos"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div id="formularioProducto" class="card shadow-sm border-0 mt-4 d-none">
+            <div class="card-header bg-clanky-red text-white">
+                <h2 class="h5 mb-0">Agregar producto</h2>
+            </div>
+            <div class="card-body">
+                <form id="formProducto">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nombreProducto" class="form-label">Nombre</label>
+                            <input type="text" id="nombreProducto" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="formatoProducto" class="form-label">Formato</label>
+                            <select id="formatoProducto" class="form-select" required>
+                                <option value="Vinilo">Vinilo</option>
+                                <option value="CD">CD</option>
+                                <option value="Merch">Merch</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="precioProducto" class="form-label">Precio</label>
+                            <input type="number" id="precioProducto" class="form-control" min="0" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="stockProducto" class="form-label">Stock</label>
+                            <input type="number" id="stockProducto" class="form-control" min="0" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="imagenProducto" class="form-label">URL de imagen</label>
+                            <input type="url" id="imagenProducto" class="form-control" placeholder="https://..." required>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success">Guardar producto</button>
+                            <button type="button" id="btnCancelar" class="btn btn-secondary">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </main>
 
     <!-- FOOTER -->
@@ -69,7 +156,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/productos.js"></script>
     <script src="js/admin.js"></script>
 </body>
 

@@ -17,64 +17,13 @@
 
     <!-- Encabezado y Navegación -->
     <header>
-        <nav class="navbar navbar-expand-lg nav-clanky">
-            <div class="container">
-
-                <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="https://i.pinimg.com/736x/67/62/03/676203cc2d70b1ea218810abf0da6600.jpg" alt="Clanky Logo"
-                        width="40" height="40" class="d-inline-block align-text-top me-2">
-                    <span class="brand-text">Clanky</span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Activar navegación">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="coleccion/vinilos.html">Vinilos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="coleccion/cds.html">CDs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="coleccion/merch.html">Merch</a></li>
-                    </ul>
-
-                    <!-- Buscador -->
-                    <form class="d-flex me-4" role="search">
-                        <input class="form-control me-2 border-0" type="search" placeholder="Buscar discos..."
-                            aria-label="Buscar">
-                        <button class="btn btn-outline-custom" type="submit">Buscar</button>
-                    </form>
-
-                    <!-- Iconos -->
-                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 icon-links">
-                        <!-- Botón de Administración: oculto por defecto, main.js lo muestra si hay sesión admin -->
-                        <a href="admin.html" id="admin-panel-link" class="d-none">
-                            <span class="btn btn-warning btn-sm fw-bold text-dark">
-                                <i class="bi bi-gear-fill"></i> Administración
-                            </span>
-                        </a>
-                        <a href="carrito.html" title="Ver Carrito" class="position-relative">
-                            <i class="bi bi-cart3 fs-4"></i>
-                            <span id="cart-count"
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-                        </a>
-                        <a href="login.html" title="Ingresar"><i class="bi bi-person-circle fs-4"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
+        <div id="navbar"></div>
     </header>
 
     <!-- Contenido Principal -->
     <main class="container my-4">
 
-        <!-- 1. SECCIÓN CARRUSEL -->
+<!-- 1. SECCIÓN CARRUSEL -->
         <section class="row mb-5">
             <div class="col-12">
                 <div id="carruselHero" class="carousel slide shadow-lg rounded overflow-hidden" data-bs-ride="carousel">
@@ -86,52 +35,49 @@
                         <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
-                    <!-- 1 -->
+
                     <div class="carousel-inner">
+                        <!-- Slide 1: Vinilos -->
                         <div class="carousel-item active">
                             <div class="card bg-dark text-white border-0 position-relative" style="min-height: 450px;">
                                 <img src="https://i0.wp.com/elplanetaurbano.com/wp-content/uploads/2018/10/NocheDisquer%C3%ADas3.jpg?fit=770%2C471&ssl=1"
                                     class="card-img position-absolute w-100 h-100"
                                     style="object-fit: cover; opacity: 0.4;" alt="Vinilos">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
-                                    <h1 class="card-title fw-bold display-4 mb-2">Clásicos en Vinilo</h1>
-                                    <p class="card-text lead w-75 d-none d-md-block">Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Architecto obcaecati, aliquid officiis eveniet
-                                        magni explicabo totam in! Cupiditate, est modi.</p>
-                                    <a href="coleccion/vinilos.html" class="btn btn-warning fw-bold mt-3 text-dark"
-                                        style="width: fit-content;">asd</a>
+                                    <h1 class="card-title fw-bold display-4 mb-2">Clásicos en CD</h1>
+                                    <p class="card-text lead w-75 d-none d-md-block">Mantén tu colección física al día. Encuentra los discos más sonados del momento y novedades recién llegadas en formato CD.</p>
+                                    <a href="coleccion/cds.html" class="btn btn-warning fw-bold mt-3 text-dark"
+                                        style="width: fit-content;">Explorar CDs</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- 2 -->
+
+                        <!-- Slide 2: CDs -->
                         <div class="carousel-item">
                             <div class="card bg-dark text-white border-0 position-relative" style="min-height: 450px;">
-                                <img src="https://indierocks.sfo3.digitaloceanspaces.com/wp-content/uploads/2022/08/Fhauna-records.jpg"
+                                <img src="https://thehofstrachronicle.com/wp-content/uploads/2026/06/Showbiz-by-PS.webp"
                                     class="card-img position-absolute w-100 h-100"
                                     style="object-fit: cover; opacity: 0.4;" alt="CDs">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
-                                    <h1 class="card-title fw-bold display-4 mb-2">Últimos Lanzamientos</h1>
-                                    <p class="card-text lead w-75 d-none d-md-block">Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Accusamus pariatur excepturi nostrum fuga harum
-                                        nihil.</p>
-                                    <a href="coleccion/cds.html" class="btn btn-light fw-bold mt-3 text-dark"
-                                        style="width: fit-content;">asd</a>
+                                    <h1 class="card-title fw-bold display-4 mb-2">Olivia Rodrigo y su nuevo álbum</h1>
+                                    <p class="card-text lead w-75 d-none d-md-block">Ya disponible la edición especial en vinilo de <em>"You Seem Pretty Sad For A Girl So In Love"</em>. Consigue el tuyo antes de que se agote.</p>
+                                    <a href="coleccion/vinilos.html" class="btn btn-light fw-bold mt-3 text-dark"
+                                        style="width: fit-content;">Ir a Vinilos</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- 3 -->
+
+                        <!-- Slide 3: Merch y Coleccionables -->
                         <div class="carousel-item">
                             <div class="card bg-dark text-white border-0 position-relative" style="min-height: 450px;">
                                 <img src="https://madrid365.es/wp-content/uploads/2023/05/1-2023-05-30T212833.784.png"
                                     class="card-img position-absolute w-100 h-100"
                                     style="object-fit: cover; opacity: 0.4;" alt="Merch">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end p-5">
-                                    <h1 class="card-title fw-bold display-4 mb-2">asd</h1>
-                                    <p class="card-text lead w-75 d-none d-md-block">Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Delectus quasi natus, libero omnis ipsum possimus.
-                                    </p>
+                                    <h1 class="card-title fw-bold display-4 mb-2">Merch y Coleccionables</h1>
+                                    <p class="card-text lead w-75 d-none d-md-block">Lleva tu amor por la música más allá de las canciones. Descubre peluches, accesorios y coleccionables de tus fandoms favoritos.</p>
                                     <a href="coleccion/merch.html" class="btn btn-success fw-bold mt-3"
-                                        style="width: fit-content;">asd</a>
+                                        style="width: fit-content;">Ver Coleccionables</a>
                                 </div>
                             </div>
                         </div>
@@ -215,13 +161,12 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer-clanky text-center p-3 mt-5">
-        <p class="mb-0">&copy; 2026 Disquería Clanky. Todos los derechos reservados.</p>
-    </footer>
+    <div id="footer"></div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/componentes.js"></script>
 </body>
 
 </html>

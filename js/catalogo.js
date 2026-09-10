@@ -419,3 +419,17 @@ function renderProductos(lista) {
     });
 }
 renderProductos(productosDisqueria);
+
+const inputBusqueda = document.getElementById("input-busqueda");
+if (inputBusqueda) {
+    inputBusqueda.addEventListener("input", () => {
+        renderProductos(productosDisqueria);
+    });
+}
+
+const ordenProductos = document.getElementById("orden-productos");
+if (ordenProductos) {
+    ordenProductos.addEventListener("change", () => {
+        renderProductos(productosDisqueria);
+    });
+}

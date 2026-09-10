@@ -1,7 +1,17 @@
-// Ejecutar actualización del contador al cargar la página
+// Ejecutar actualización del contador y del botón de admin al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
     actualizarContadorCarrito();
+    mostrarBotonAdminSiCorresponde();
 });
+
+// Muestra el botón "Administración" en el navbar solo si hay sesión de admin activa
+function mostrarBotonAdminSiCorresponde() {
+    const botonAdmin = document.getElementById("admin-panel-link");
+    if (!botonAdmin) return;
+
+    const adminLogueado = localStorage.getItem("CLANKY_ADMIN_LOGUEADO") === "true";
+    botonAdmin.classList.toggle("d-none", !adminLogueado);
+}
 
 // Función global para agregar desde el botón
 function agregarAlCarrito(idProducto) {

@@ -399,11 +399,50 @@ const productosIniciales = [
         precio: 5900,
         stock: 10,
         imagen: "https://static.wikia.nocookie.net/iclubpenguinofficial/images/7/75/Purple_Puffle.png/revision/latest/scale-to-width-down/1000?cb=20180215192943"
+    },
+    {
+        id: 51,
+        nombre: "Polera The Cure Bloodflowers",
+        formato: "Merch",
+        precio: 26900,
+        stock: 10,
+        imagen: "https://cdn.media.amplience.net/s/hottopic/36926693_hi?$productMainDesktop$&fmt=auto"
+    },
+    {
+        id: 52,
+        nombre: "Polera Blink-182 Daisy Face Logo",
+        formato: "Merch",
+        precio: 24500,
+        stock: 5,
+        imagen: "https://cdn.media.amplience.net/s/hottopic/37029982_hi?$productMainDesktop$&fmt=auto"
+    },
+    {
+        id: 53,
+        nombre: "Polera Twenty One Pilots More Than Imagined",
+        formato: "Merch",
+        precio: 25900,
+        stock: 15,
+        imagen: "https://cdn.media.amplience.net/s/hottopic/36598943_hi?$productMainDesktop$&fmt=auto"
+    },
+    {
+        id: 54,
+        nombre: "Polera Linkin Park Hybrid Theory Symbols",
+        formato: "Merch",
+        precio: 24900,
+        stock: 10,
+        imagen: "https://cdn.media.amplience.net/s/hottopic/34598444_hi?$productMainDesktop$&fmt=auto"
+    },
+    {
+        id: 55,
+        nombre: "Billie Eilish Hit Me Hard And Soft Guitar Portrait",
+        formato: "Merch",
+        precio: 34900,
+        stock: 10,
+        imagen: "https://cdn.media.amplience.net/s/hottopic/36337394_hi?$productMainDesktop$&fmt=auto"
     }
 
 ];
 
-// Lee los productos desde localStorage. Si no existen, los crea con los iniciales.
 function obtenerProductos() {
     const productosGuardados = localStorage.getItem("CLANKY_PRODUCTOS");
 
@@ -415,7 +454,6 @@ function obtenerProductos() {
     return productosIniciales;
 }
 
-// Guarda la lista completa de productos en localStorage
 function guardarProductos(productos) {
     localStorage.setItem("CLANKY_PRODUCTOS", JSON.stringify(productos));
 }

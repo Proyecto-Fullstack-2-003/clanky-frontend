@@ -177,3 +177,64 @@ function ocultarError(divError) {
 function iniciarSesion(datosSesion) {
     localStorage.setItem("SESION_CLANKY", JSON.stringify(datosSesion));
 }
+
+<!-- Validación contacto -->
+
+const formulario = document.getElementById("formContacto");
+const email = document.getElementById("email");
+const asunto = document.getElementById("asunto");
+const mensaje = document.getElementById("mensaje");
+const mensajeContacto = document.getElementById("mensajeContacto");
+
+// Expresiones regulares del profesor
+const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const regexAsunto = /^[a-zA-ZÁÉÍÓÚáéíóúÑñ0-9\s.,!?¿¡'-]{5,100}$/;
+const regexMensaje = /^[a-zA-ZÁÉÍÓÚáéíóúÑñ0-9\s.,!?¿¡'"\-():;]{10,500}$/;
+
+function estadoCampo(campo, esValido, errorElemento, textoError = "") {
+    campo.classList.remove("is-valid", "is-invalid");
+    campo.classList.add(esValido ? "is-valid" : "is-invalid");
+    errorElemento.textContent = esValido ? "" : textoError;
+    return esValido;
+}
+
+function validarEmail() {
+    const valor = email.value.trim();
+    return estadoCampo(email, regexEmail.test(valor), document.getElementById("errorEmail"), "Ingresa un correo electrónico válido.");
+}
+
+function validarAsunto() {
+    const valor = asunto.value.trim();
+    const valido = regexAsunto.test(valor) && valor.length >= 5 && valor.length <= 100;
+    return estadoCampo(asunto, valido, document.getElementById("errorAsunto"), "El asunto debe tener entre 5 y 100 caracteres válidos.");
+}
+
+function validarMensaje() {
+    const valor = mensaje.value.trim();
+    const valido = regexMensaje.test(valor) && valor.length >= 10 && valor.length <= 500;
+    return estadoCampo(mensaje, valido, document.getElementById("errorMensaje"), "El mensaje debe tener entre 10 y 500 caracteres válidos.");
+}
+
+function mostrarAlertaContacto(texto, tipo = "success") {
+    if (!mensajeContacto) return;
+    mensajeContacto.innerHTML = `
+        <div class="alert alert-${tipo} alert-dismissible fade show fw-bold" role="alert">
+            ${texto}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>`;
+}
+
+if (formulario) {
+    formulario.addEventListener("submit", event => {
+        event.preventDefault();
+        if (validarEmail() && validarAsunto() && validarMensaje()) {
+            mostrarAlertaContacto("¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.");
+            formulario.reset();
+            [email, asunto, mensaje].forEach(campo => campo.classList.remove("is-valid", "is-invalid"));
+        }
+    });
+
+    email.addEventListener("input", validarEmail);
+    asunto.addEventListener("input", validarAsunto);
+    mensaje.addEventListener("input", validarMensaje);
+}

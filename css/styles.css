@@ -68,6 +68,19 @@ body {
     border-color: var(--clanky-red);
 }
 
+/* --- CARRUSEL --- */
+.carousel-control-prev,
+.carousel-control-next {
+    pointer-events: none; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.carousel-caption a,
+.carousel-caption button {
+    pointer-events: auto; 
+}
+
 /* --- FOOTER --- */
 .footer-clanky {
     background-color: #292929;

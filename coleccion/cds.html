@@ -18,13 +18,13 @@
         <div id="navbar"></div>
     </header>
 
-<!-- Catálogo de Productos -->
+    <!-- Catálogo de Productos -->
     <main class="container my-5">
         <h2 class="text-center text-white fw-bold"
             style="text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
             CDs
         </h2>
-        
+
         <!-- Controles de Filtro y Orden -->
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mb-4">
             <!-- Buscador -->
@@ -45,8 +45,6 @@
             </div>
         </div>
 
-        <!-- AQUÍ SE RENDERIZAN LOS PRODUCTOS -->
-        <!-- Nota el data-categoria="cd" para que el JS filtre solo los CDs -->
         <div id="contenedor-productos" class="row" data-categoria="cd"></div>
 
     </main>
@@ -55,10 +53,11 @@
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/productos.js"></script>
     <script src="../js/catalogo.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/componentes.js"></script>
 </body>
-</body>
+
 
 </html>
